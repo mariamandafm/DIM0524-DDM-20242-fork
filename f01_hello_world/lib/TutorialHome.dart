@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class TutorialHome extends StatelessWidget {
+
+  /* 
+  const TutorialHome({super.key}): O construtor da classe é definido como constante (const), 
+  o que melhora a eficiência quando o widget é reconstruído. A chave (key) é passada 
+  para o construtor da classe pai (super.key), o que é útil para identificar 
+  o widget na árvore de widgets.
+  */
   const TutorialHome({super.key});
 
   @override
