@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 void main() {
   runApp(
-    const Center(
-      child: Text(
-        "Olá mundo!",
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 30),
+     MaterialApp(
+      title: 'Meu App Ola Mundo',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Meu Primeiro App"),
+          backgroundColor: Colors.purple,
+        ),
+        body: Center(
+            child: Text(
+              "Olá mundo!",
+              textDirection: TextDirection.ltr,
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
       ),
-    ),
+      ),
   );
 }
