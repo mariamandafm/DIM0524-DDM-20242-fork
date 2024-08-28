@@ -14,20 +14,40 @@ class MyLayouts extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget> [
-            Container(
-              padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
-              color: Colors.red,
-              child: Text("1"),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.red,
+                child: Text("1"),
+              ),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
-              color: Colors.blue,
-              child: Text("1"),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.blue,
+                child: Text("1"),
+              ),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
-              color: Colors.green,
-              child: Text("1"),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.green,
+                child: Text("1"),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.red,
+                child: Text("1"),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.blue,
+                child: Text("1"),
+              ),
             ),
           ],
         ),
