@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -84,7 +86,6 @@ class LoginScreen extends StatelessWidget {
                         "Keep it",
                       ),
                       TextButton(
-                        style: ButtonStyle(alignment: Alignment.centerRight),
                         onPressed: () {},
                         child: Text("Esqueceu sua senha?"),
                       ),
@@ -95,8 +96,22 @@ class LoginScreen extends StatelessWidget {
                   height: 20,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () { print("clicou!");},
                   child: Text("Entrar"),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                GestureDetector(
+                  onTap: (){ print ("clicou ");},
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 80),
+                    decoration: BoxDecoration(
+                      color: ThemeData().primaryColor,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Text("Entrar", style: TextStyle(color: Colors.white),),
+                  ),
                 ),
               ],
             ),
