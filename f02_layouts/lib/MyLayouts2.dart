@@ -51,14 +51,68 @@ class MyLayouts2 extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 16.0), // Espaçamento entre containers
-              Container(
-                padding: EdgeInsets.all(16.0),
-                color: Colors.orange,
-                child: Text(
-                  'Container na base (Column)',
-                  style: TextStyle(color: Colors.white),
-                  textAlign: TextAlign.center,
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.all(16.0),
+                  color: Colors.orange,
+                  child: Text(
+                    'Container na base (Column)',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
+              ),
+              SizedBox(height: 16.0), // Espaçamento entre containers
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.all(16.0),
+                  color: Colors.amber,
+                  child: Text(
+                    'Container na base (Column)',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+              SizedBox(height: 16.0), // Espaçamento entre containers
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(16.0),
+                      color: Colors.red,
+                      child: Text(
+                        'Container à esquerda (Row)',
+                        style: TextStyle(color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 16.0), // Espaçamento entre os containers na Row
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(16.0),
+                      color: Colors.green,
+                      child: Text(
+                        'Container à direita (Row)',
+                        style: TextStyle(color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 16.0), // Espaçamento entre os containers na Row
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(16.0),
+                      color: Colors.blue,
+                      child: Text(
+                        'Container à direita (Row)',
+                        style: TextStyle(color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
