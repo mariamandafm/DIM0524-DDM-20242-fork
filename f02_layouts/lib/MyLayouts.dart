@@ -17,39 +17,44 @@ class MyLayouts extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text("Meus Layouts"),),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget> [
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    padding: EdgeInsets.symmetric(vertical: boxSize),
-                    color: Colors.red,
-                    child: Text("1",textAlign: TextAlign.center),
-                  ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    padding: EdgeInsets.symmetric(vertical: boxSize),
-                    color: Colors.blue,
-                    child: Text("1",textAlign: TextAlign.center),
-                  ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    padding: EdgeInsets.symmetric(vertical: boxSize),
-                    color: Colors.green,
-                    child: Text("1", textAlign: TextAlign.center,),
-                  ),
-                ),
-                
-              ],
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget> [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.red,
+                child: Text("1"),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.blue,
+                child: Text("1"),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.green,
+                child: Text("1"),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.red,
+                child: Text("1"),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: boxSize, horizontal: boxSize),
+                color: Colors.blue,
+                child: Text("1"),
+              ),
             ),
 
           ],
