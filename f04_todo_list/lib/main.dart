@@ -11,8 +11,8 @@ void main(){
         textTheme: TextTheme(
 
           bodySmall: TextStyle(fontSize: 18.0),  // Configura o tamanho da fonte para bodyText1
-          bodyMedium: TextStyle(fontSize: 26.0),  // Configura o tamanho da fonte para bodyText2
-          bodyLarge: TextStyle(fontSize: 30),
+          bodyMedium: TextStyle(fontSize: 22.0),  // Configura o tamanho da fonte para bodyText2
+          bodyLarge: TextStyle(fontSize: 26.0),
         ),
       ),
     )
