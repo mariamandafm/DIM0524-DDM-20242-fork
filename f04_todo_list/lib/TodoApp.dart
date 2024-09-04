@@ -26,13 +26,13 @@ class _TodoAppState extends State<TodoApp> {
 
   
 
-  void _addTarefa(String descricaoTarefa) {
+  void _addTarefa(String descricaoTarefa, DateTime dataSelecionada) {
     
 
     Tarefa _novaTarefa = Tarefa(
       id: Random().nextInt(9999).toString(),
       descricao: descricaoTarefa,
-      dataTarefa: DateTime.now(),
+      dataTarefa: dataSelecionada,
     );
 
     setState(() {
