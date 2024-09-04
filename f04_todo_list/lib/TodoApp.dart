@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:f04_todo_list/model/Tarefa.dart';
+import 'package:f04_todo_list/widgets/TodoForm.dart';
+import 'package:f04_todo_list/widgets/TodoList.dart';
 import 'package:flutter/material.dart';
 
 class TodoApp extends StatefulWidget {
@@ -22,16 +24,14 @@ class _TodoAppState extends State<TodoApp> {
         dataTarefa: DateTime.now())
   ];
 
-  TextEditingController _descricaoController = TextEditingController();
+  
 
-  void _addTarefa() {
-    print(_descricaoController.text);
-
-    String _tarefaDescricao = _descricaoController.text;
+  void _addTarefa(String descricaoTarefa) {
+    
 
     Tarefa _novaTarefa = Tarefa(
       id: Random().nextInt(9999).toString(),
-      descricao: _tarefaDescricao,
+      descricao: descricaoTarefa,
       dataTarefa: DateTime.now(),
     );
 
@@ -54,64 +54,13 @@ class _TodoAppState extends State<TodoApp> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            Container(
-              child: Column(
-                children: [
-                  Text(
-                    "Descrição: ",
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  TextField(
-                    controller: _descricaoController,
-                    decoration: InputDecoration(
-                      hintText: "Inserir descricao",
-                      hintStyle: TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  ElevatedButton(
-                    onPressed: _addTarefa,
-                    child: Text("Adicionar", style: TextStyle(fontSize: 16)),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 300,
-              child: ListView.builder(
-                  itemCount: _listaTarefas.length,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      margin: EdgeInsets.all(8),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              _listaTarefas.elementAt(index).descricao,
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  }),
-            )
+            TodoForm(onSubmit: _addTarefa),
+            TodoList(listaTarefas: _listaTarefas)
           ],
         ),
       ),
     );
   }
 }
+
+
