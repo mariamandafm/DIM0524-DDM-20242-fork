@@ -1,10 +1,18 @@
+import 'package:f04_todo_list/model/Tarefa.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TaskDetail extends StatelessWidget {
-  const TaskDetail({super.key});
+  const TaskDetail({
+    super.key, 
+    required Tarefa tarefa
+    }) : _tarefa = tarefa;
+
+  final Tarefa _tarefa;
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ThemeData().primaryColor,
@@ -17,10 +25,18 @@ class TaskDetail extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("ID: "),
-              Text("Descrição: "),
-              Text("Data: "),
+              Text("ID: ${_tarefa.id}"),
+              Text("Descrição: ${_tarefa.descricao}"),
+              Text("Data: ${DateFormat('dd/MM/y').format(_tarefa.dataTarefa)}"),
+              SizedBox(
+                height: 16,
+              ),
+             
+                DateTime.now().isBefore(_tarefa.dataTarefa)
+                ? Text("Status: Tarefa no prazo", style: TextStyle(color: Colors.green),)
+                : Text("Status: Tarefa fora do prazo", style: TextStyle(color: Colors.red),),
               SizedBox(
                 height: 16,
               ),

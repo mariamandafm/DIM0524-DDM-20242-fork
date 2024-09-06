@@ -13,10 +13,10 @@ class TodoList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _openTaskDetail() {
+    _openTaskDetail(Tarefa tarefa) {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => TaskDetail(),
+          builder: (context) => TaskDetail(tarefa: tarefa,),
         ),
       );
     }
@@ -27,7 +27,7 @@ class TodoList extends StatelessWidget {
           itemCount: _listaTarefas.length,
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: _openTaskDetail,
+              onTap: () => _openTaskDetail(_listaTarefas.elementAt(index)),
               child: Card(
                 margin: EdgeInsets.all(8),
                 child: Padding(

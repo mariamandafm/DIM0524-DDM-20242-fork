@@ -71,7 +71,7 @@ class _TodoAppState extends State<TodoApp> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            TodoForm(onSubmit: _addTarefa),
+            //TodoForm(onSubmit: _addTarefa),
             TodoList(listaTarefas: _listaTarefas)
           ],
         ),
