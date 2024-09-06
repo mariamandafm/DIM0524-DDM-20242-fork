@@ -24,11 +24,7 @@ class _TodoAppState extends State<TodoApp> {
         dataTarefa: DateTime.now())
   ];
 
-  
-
   void _addTarefa(String descricaoTarefa, DateTime dataSelecionada) {
-    
-
     Tarefa _novaTarefa = Tarefa(
       id: Random().nextInt(9999).toString(),
       descricao: descricaoTarefa,
@@ -38,6 +34,18 @@ class _TodoAppState extends State<TodoApp> {
     setState(() {
       _listaTarefas.add(_novaTarefa);
     });
+
+    Navigator.of(context).pop();
+  }
+
+  void _openTaskForm() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: TodoForm(onSubmit: _addTarefa),
+      ),
+    );
   }
 
   @override
@@ -49,6 +57,15 @@ class _TodoAppState extends State<TodoApp> {
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: ThemeData().primaryColor,
+        actions: [
+          IconButton(
+            onPressed: _openTaskForm,
+            icon: Icon(
+              Icons.add_circle,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -59,8 +76,12 @@ class _TodoAppState extends State<TodoApp> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _openTaskForm,
+        child: Icon(
+          Icons.add,
+        ),
+      ),
     );
   }
 }
-
-
