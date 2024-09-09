@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class TaskDetail extends StatelessWidget {
-  TaskDetail({
+  const TaskDetail({
     super.key, 
-    });
+    required Tarefa tarefa,
+    }) : _tarefa = tarefa;
 
-  final Tarefa _tarefa = Tarefa(id: "1111", descricao: "descricao", dataTarefa: DateTime.now());
+  final Tarefa _tarefa;
 
   @override
   Widget build(BuildContext context) {

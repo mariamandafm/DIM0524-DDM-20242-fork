@@ -21,7 +21,7 @@ class TodoList extends StatelessWidget {
           builder: (context) => TaskDetail(tarefa: tarefa,),
         ),
       ); */
-      context.go('/details');
+      context.go('/details', extra: tarefa);
     }
 
     return Container(
