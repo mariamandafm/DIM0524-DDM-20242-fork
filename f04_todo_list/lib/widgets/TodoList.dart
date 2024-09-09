@@ -1,7 +1,9 @@
 import 'package:f04_todo_list/model/Tarefa.dart';
+import 'package:f04_todo_list/routes/MyRoutes.dart';
 import 'package:f04_todo_list/screens/TaskDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:go_router/go_router.dart';
 
 class TodoList extends StatelessWidget {
   const TodoList({
@@ -14,11 +16,12 @@ class TodoList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _openTaskDetail(Tarefa tarefa) {
-      Navigator.of(context).push(
+      /* Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => TaskDetail(tarefa: tarefa,),
         ),
-      );
+      ); */
+      context.go('/details');
     }
 
     return Container(

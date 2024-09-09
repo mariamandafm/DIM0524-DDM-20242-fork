@@ -1,11 +1,11 @@
 
 import 'package:f04_todo_list/TodoApp.dart';
 import 'package:flutter/material.dart';
+import 'package:f04_todo_list/routes/MyRoutes.dart';
 
 void main(){
-  runApp(
-    MaterialApp(
-      home: TodoApp(),
+    runApp(MaterialApp.router(
+      routerConfig: myRouter,
       theme: ThemeData(
         // Defina o estilo global de texto
         textTheme: TextTheme(
@@ -15,6 +15,6 @@ void main(){
           bodyLarge: TextStyle(fontSize: 24.0),
         ),
       ),
-    )
-  );
+    ),
+    );
 }
