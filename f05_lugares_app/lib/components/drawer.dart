@@ -1,4 +1,6 @@
+import 'package:f05_lugares_app/components/item_pais.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MeuDrawer extends StatelessWidget {
   const MeuDrawer({super.key});
@@ -19,12 +21,16 @@ class MeuDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.category),
             title: const Text('Países'),
-            onTap: () {},
+            onTap: () {
+              context.pushReplacement('/');
+            },
           ),
           ListTile(
             leading: Icon(Icons.engineering),
             title: const Text('Configurações'),
-            onTap: () {},
+            onTap: () {
+              context.pushReplacement('/configuracoes');
+            },
           ),
         ],
       ),
