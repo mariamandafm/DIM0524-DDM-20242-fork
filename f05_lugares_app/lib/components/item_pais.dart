@@ -12,23 +12,26 @@ class ItemPais extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-        padding: EdgeInsets.all(15),
-        child: Text(
-          _pais.titulo,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 18,),
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          gradient: LinearGradient(
-              colors: [
-                _pais.cor.withOpacity(0.5), //cor passad com opacidade
-                _pais.cor, //cor passada
-              ],
-              begin: Alignment.topLeft, //inicio do gradiente
-              end: Alignment.bottomRight // fim
-              ),
+      child: GestureDetector(
+        onTap: () => context.go('/lugaresPorPais', extra: _pais),
+        child: Container(
+          padding: EdgeInsets.all(15),
+          child: Text(
+            _pais.titulo,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 18,),
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: LinearGradient(
+                colors: [
+                  _pais.cor.withOpacity(0.5), //cor passad com opacidade
+                  _pais.cor, //cor passada
+                ],
+                begin: Alignment.topLeft, //inicio do gradiente
+                end: Alignment.bottomRight // fim
+                ),
+          ),
         ),
       ),
     );
