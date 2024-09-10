@@ -6,17 +6,19 @@ class DetalhesLugarScreen extends StatelessWidget {
 
   final Lugar lugar;
 
-  void _favoritarLugar(){
-    print("Lugar favirtado!");
-  }
-
-
   @override
   Widget build(BuildContext context) {
+    void _favoritarLugar() {
+      print("Lugar favoritado!");
+    }
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ThemeData().primaryColor,
-        title: Text(lugar.titulo, style: TextStyle(color: Colors.white),),
+        title: Text(
+          lugar.titulo,
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Column(
         children: <Widget>[
@@ -69,7 +71,7 @@ class DetalhesLugarScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed:_favoritarLugar, 
+        onPressed: _favoritarLugar,
         child: Icon(Icons.star_border),
       ),
     );
