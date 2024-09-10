@@ -6,13 +6,13 @@ class FavoritosScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /* appBar: AppBar(
         backgroundColor: ThemeData().primaryColor,
         title: Text(
           "Favoritos",
           style: TextStyle(color: Colors.white),
         ),
-      ),
+      ), */
       body: Center(
         child: Text("Tela de favoritos", style: TextStyle(fontSize: 20),),
       ),

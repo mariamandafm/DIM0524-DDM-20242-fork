@@ -12,13 +12,13 @@ class PaisScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /* appBar: AppBar(
         backgroundColor: ThemeData().primaryColor,
         title: Text(
           "Países",
           style: TextStyle(color: Colors.white),
         ),
-      ),
+      ), */
       body: GridView(
         padding: EdgeInsets.all(16),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
