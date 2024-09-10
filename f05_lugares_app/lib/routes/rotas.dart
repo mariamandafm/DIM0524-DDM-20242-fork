@@ -1,5 +1,6 @@
 import 'package:f05_lugares_app/model/lugar.dart';
 import 'package:f05_lugares_app/model/pais.dart';
+import 'package:f05_lugares_app/screens/abas.dart';
 import 'package:f05_lugares_app/screens/detalhes_lugar.dart';
 import 'package:f05_lugares_app/screens/lugares_por_pais.dart';
 import 'package:f05_lugares_app/screens/pais_screen.dart';
@@ -11,7 +12,7 @@ final GoRouter myRouter = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return PaisScreen();
+        return MinhasAbas();
       },
     ),
     GoRoute(
