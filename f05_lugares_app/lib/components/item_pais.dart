@@ -14,7 +14,6 @@ class ItemPais extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: GestureDetector(
         //onTap: () => context.push('/lugaresPorPais', extra: _pais),
-
         onTap: () {
           Navigator.of(context).pushNamed(
             '/lugaresPorPais',
