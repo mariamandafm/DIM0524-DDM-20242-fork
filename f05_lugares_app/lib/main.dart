@@ -37,10 +37,10 @@ class _MeuAppState extends State<MeuApp> {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        AppRoutes.HOME: (ctx) => MinhasAbas(listaFavoritos: _lugaresFavoritos,),
-        AppRoutes.COUNTRY_PLACES: (ctx) => LugarPorPaisScreen(),
-        AppRoutes.PLACES_DETAIL: (ctx) => DetalhesLugarScreen(onToggle: toggleLugarFavorito),
-        AppRoutes.SETTINGS: (ctx) => ConfigracoesScreen(),
+        '/': (ctx) => MinhasAbas(listaFavoritos: _lugaresFavoritos,),
+        '/lugaresPorPais': (ctx) => LugarPorPaisScreen(),
+        '/detalheLugar': (ctx) => DetalhesLugarScreen(onToggle: toggleLugarFavorito),
+        '/configuracoes': (ctx) => ConfigracoesScreen(),
       },
     );
 
