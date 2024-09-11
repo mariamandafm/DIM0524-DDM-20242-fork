@@ -1,24 +1,37 @@
 import 'package:f05_lugares_app/components/drawer.dart';
+import 'package:f05_lugares_app/model/lugar.dart';
 import 'package:f05_lugares_app/screens/favoritos.dart';
 import 'package:f05_lugares_app/screens/pais_screen.dart';
 import 'package:flutter/material.dart';
 
-class MinhasAbas extends StatelessWidget {
-  const MinhasAbas({super.key});
+class MinhasAbas extends StatefulWidget {
+  final List<Lugar> listaFavoritos;
+  const MinhasAbas({super.key, required this.listaFavoritos});
+
+  @override
+  State<MinhasAbas> createState() => _MinhasAbasState();
+}
+
+class _MinhasAbasState extends State<MinhasAbas> {
+
+ 
 
   @override
   Widget build(BuildContext context) {
-    return MinhasAbasBottom();
+    return MinhasAbasBottom(lugaresFavoritos: widget.listaFavoritos);
   }
 }
 
-class MinhasAbasTop extends StatelessWidget {
-  const MinhasAbasTop({
+/* class MinhasAbasTop extends StatelessWidget {
+  final List<Lugar> lugaresFavoritos;
+  MinhasAbasTop({
     super.key,
+    required this.lugaresFavoritos,
   });
 
   @override
   Widget build(BuildContext context) {
+
     return DefaultTabController(
         length: 2,
         child: Scaffold(
@@ -47,15 +60,16 @@ class MinhasAbasTop extends StatelessWidget {
           body: const TabBarView(
             children: [
               PaisScreen(),
-              FavoritosScreen(),
+              FavoritosScreen(lugaresFavoritos: lugaresFavoritos,),
             ],
           ),
         ));
   }
-}
+} */
 
 class MinhasAbasBottom extends StatefulWidget {
-  MinhasAbasBottom({super.key});
+  final List<Lugar> lugaresFavoritos;
+  MinhasAbasBottom({super.key, required this.lugaresFavoritos});
 
   @override
   State<MinhasAbasBottom> createState() => _MinhasAbasBottomState();
@@ -90,7 +104,7 @@ class _MinhasAbasBottomState extends State<MinhasAbasBottom> {
                   child: TabBarView(
                     children: [
                       PaisScreen(),
-                      FavoritosScreen(),
+                      FavoritosScreen(lugaresFavoritos: widget.lugaresFavoritos,),
                     ],
                   ),
                 ),
