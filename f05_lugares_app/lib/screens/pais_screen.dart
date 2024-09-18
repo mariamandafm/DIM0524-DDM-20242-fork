@@ -1,6 +1,5 @@
 import 'package:f05_lugares_app/components/item_pais.dart';
 import 'package:f05_lugares_app/data/dados.dart';
-import 'package:f05_lugares_app/model/lugar.dart';
 import 'package:flutter/material.dart';
 
 class PaisScreen extends StatelessWidget {

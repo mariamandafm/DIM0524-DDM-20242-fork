@@ -1,7 +1,5 @@
-import 'package:f05_lugares_app/components/item_pais.dart';
 import 'package:f05_lugares_app/model/lugar.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class ItemLugar extends StatelessWidget {
   const ItemLugar({super.key, required this.lugar});

@@ -1,11 +1,3 @@
-import 'package:f05_lugares_app/model/lugar.dart';
-import 'package:f05_lugares_app/model/pais.dart';
-import 'package:f05_lugares_app/screens/abas.dart';
-import 'package:f05_lugares_app/screens/configuracoes.dart';
-import 'package:f05_lugares_app/screens/detalhes_lugar.dart';
-import 'package:f05_lugares_app/screens/lugares_por_pais.dart';
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class MinhasRotas {
   //parametros

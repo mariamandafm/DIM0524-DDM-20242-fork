@@ -1,6 +1,4 @@
-import 'package:f05_lugares_app/components/item_pais.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class MeuDrawer extends StatelessWidget {
   const MeuDrawer({super.key});

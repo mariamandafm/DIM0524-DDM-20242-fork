@@ -1,8 +1,5 @@
-import 'package:f05_lugares_app/model/lugar.dart';
 import 'package:f05_lugares_app/model/pais.dart';
-import 'package:f05_lugares_app/routes/rotas.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class ItemPais extends StatelessWidget {
   ItemPais({super.key, required Pais pais}) : _pais = pais;
