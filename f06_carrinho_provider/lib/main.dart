@@ -9,9 +9,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ContadorModel(), //cria a instancia de um estado e prove a todos os componentes filhos (nesse caso todo o app)
-      child: MeuApp()),
+    MeuApp()
   );
 }
 
@@ -23,7 +21,13 @@ class MeuApp extends StatelessWidget {
     return MaterialApp(
       title: 'Provider Demo',
       theme: appTheme,
-      home: MeuContador(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginScreen(),
+          '/catalog': (context) => CatalagoScreen(),
+          '/cart': (context) => const CarrinhoScreen(),
+
+      },
     );
   }
 }
