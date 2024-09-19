@@ -39,6 +39,11 @@ class MeuContador extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
+                Text("Contador WATCH: ${context.watch<ContadorModel>().contador}", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                Text("Contador PROVIDER OF: ${Provider.of<ContadorModel>(context).contador}", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                SizedBox(
+                  height: 16,
+                ),
                 ElevatedButton(
                   onPressed: (){
                     context.read<ContadorModel>().incrementar();
@@ -50,7 +55,8 @@ class MeuContador extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: (){
-                    context.read<ContadorModel>().zerar();
+                    //context.read<ContadorModel>().zerar();
+                    Provider.of<ContadorModel>(context,listen: false).zerar();
                   },
                   child: Text(
                     "Zerar",
