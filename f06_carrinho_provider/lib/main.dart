@@ -1,5 +1,6 @@
 
 
+import 'package:f06_carrinho_provider/contador_provider/meu_contador.dart';
 import 'package:f06_carrinho_provider/theme/theme.dart';
 import 'package:f06_carrinho_provider/view/carrinho_screen.dart';
 import 'package:f06_carrinho_provider/view/catalogo_screen.dart';
@@ -18,12 +19,7 @@ class MeuApp extends StatelessWidget {
     return MaterialApp(
         title: 'Provider Demo',
         theme: appTheme,
-        initialRoute: '/',
-        routes: {
-          '/': (context) => LoginScreen(),
-          '/catalog': (context) => CatalagoScreen(),
-          '/cart': (context) => const CarrinhoScreen(),
-        },
+        home: MeuContador(),
       );
   }
 }
