@@ -1,6 +1,8 @@
 import 'package:f06_carrinho_provider/data/catalogo.dart';
+import 'package:f06_carrinho_provider/model/carrinho_model.dart';
 import 'package:f06_carrinho_provider/model/item.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CatalagoScreen extends StatelessWidget {
   CatalagoScreen({super.key});
@@ -86,6 +88,8 @@ class _AddButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+        final carrinho = Provider.of<CarrinhoModel>(context);
+
         return TextButton(
           style: ButtonStyle(
             overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
@@ -95,8 +99,11 @@ class _AddButton extends StatelessWidget {
               return null;
             }),
           ),
-          onPressed: () {  },
-          child: const Text('ADD'),
+          onPressed: () { 
+            carrinho.addProduto(item);
+            },
+            
+          child: carrinho.temProduto(item) ? const Icon(Icons.check) : const Text('ADD'), 
         );
 
   }

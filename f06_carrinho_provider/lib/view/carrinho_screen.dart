@@ -1,4 +1,6 @@
+import 'package:f06_carrinho_provider/model/carrinho_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CarrinhoScreen extends StatelessWidget {
   const CarrinhoScreen({super.key});
@@ -34,22 +36,27 @@ class _CartList extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var itemNameStyle = Theme.of(context).textTheme.headlineSmall;
+    
 
-    return ListView.builder(
-        itemCount: 1,
-        itemBuilder: (context, index) => ListTile(
-          leading: const Icon(Icons.done),
-          trailing: IconButton(
-            icon: const Icon(Icons.remove_circle_outline),
-            onPressed: () {
-              
-            },
+    return Consumer<CarrinhoModel>(
+      builder: (context, carrinho, child) {
+        return ListView.builder(
+          itemCount: carrinho.produtos.length,
+          itemBuilder: (context, index) => ListTile(
+            leading: const Icon(Icons.done),
+            trailing: IconButton(
+              icon: const Icon(Icons.remove_circle_outline),
+              onPressed: () {
+                carrinho.removerProduto(carrinho.produtos.elementAt(index));
+              },
+            ),
+            title: Text(
+              "${carrinho.produtos.elementAt(index).nome}",
+              style: itemNameStyle,
+            ),
           ),
-          title: Text(
-            "Item #1",
-            style: itemNameStyle,
-          ),
-        ),
+      );
+      },
     );
   }
 }
@@ -66,7 +73,9 @@ class _CartTotal extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-                    Text('\$${0}', style: hugeStyle),
+                    Consumer<CarrinhoModel>(builder: (context, carrinho, child) {
+                      return Text('\$${carrinho.total}', style: hugeStyle);
+                    }) ,
             const SizedBox(width: 24),
             TextButton(
               onPressed: () {
