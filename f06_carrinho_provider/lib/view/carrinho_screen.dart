@@ -1,4 +1,6 @@
+import 'package:f06_carrinho_provider/model/CartModel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CarrinhoScreen extends StatelessWidget {
   const CarrinhoScreen({super.key});
@@ -35,21 +37,26 @@ class _CartList extends StatelessWidget {
 
     var itemNameStyle = Theme.of(context).textTheme.headlineSmall;
 
-    return ListView.builder(
-        itemCount: 1,
-        itemBuilder: (context, index) => ListTile(
-          leading: const Icon(Icons.done),
-          trailing: IconButton(
-            icon: const Icon(Icons.remove_circle_outline),
-            onPressed: () {
-              
-            },
+
+    return Consumer<CartModel>(
+      builder: (context, cartModel, child) {
+        return ListView.builder(
+          itemCount: cartModel.cartItems.length,
+          itemBuilder: (context, index) => ListTile(
+            leading: const Icon(Icons.done),
+            trailing: IconButton(
+              icon: const Icon(Icons.remove_circle_outline),
+              onPressed: () {
+                cartModel.removeItem(cartModel.cartItems[index]);
+              },
+            ),
+            title: Text(
+              cartModel.cartItems[index].nome,
+              style: itemNameStyle,
+            ),
           ),
-          title: Text(
-            "Item #1",
-            style: itemNameStyle,
-          ),
-        ),
+      );
+      } 
     );
   }
 }

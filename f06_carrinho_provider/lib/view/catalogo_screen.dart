@@ -1,12 +1,13 @@
 import 'package:f06_carrinho_provider/data/catalogo.dart';
+import 'package:f06_carrinho_provider/model/CartModel.dart';
 import 'package:f06_carrinho_provider/model/item.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CatalagoScreen extends StatelessWidget {
   CatalagoScreen({super.key});
 
   final List<Item> itens = catalogo.map<Item>((produto) => Item(catalogo.indexOf(produto), produto)).toList();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,8 +50,6 @@ class _MyListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     var textTheme = Theme.of(context).textTheme.headlineSmall;
 
     return Padding(
@@ -82,10 +81,11 @@ class _AddButton extends StatelessWidget {
   final Item item;
 
   const _AddButton({required this.item, Key? key}) : super(key: key);
+  
 
   @override
   Widget build(BuildContext context) {
-
+        final carrinho = Provider.of<CartModel>(context);
         return TextButton(
           style: ButtonStyle(
             overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
@@ -95,9 +95,10 @@ class _AddButton extends StatelessWidget {
               return null;
             }),
           ),
-          onPressed: () {  },
-          child: const Text('ADD'),
+          onPressed: () {
+            carrinho.addItem(item);
+          },
+          child: carrinho.hasItem(item) ? const Icon(Icons.check) : const Text('ADD'),
         );
-
   }
 }
