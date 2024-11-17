@@ -1,0 +1,10 @@
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/icudtl.dat
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

@@ -38,6 +38,33 @@ class MeuDrawer extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            leading: Icon(Icons.add),
+            title: const Text('Adicionar Lugar'),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(
+                '/adicionarLugar',
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.pin_drop_rounded),
+            title: const Text('Gerenciar Lugares'),
+            onTap: (){
+              Navigator.of(context).pushReplacementNamed(
+                '/gereciarLugares',
+              );
+            }
+          ),
+          ListTile(
+            leading: Icon(Icons.map_outlined),
+            title: const Text('Gerenciar Países'),
+            onTap: (){
+              Navigator.of(context).pushReplacementNamed(
+                '/gerenciarPaises',
+              );
+            }
+          )
         ],
       ),
     );

@@ -1,18 +1,21 @@
+import 'package:f05_lugares_app/main.dart';
 import 'package:f05_lugares_app/model/lugar.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DetalhesLugarScreen extends StatelessWidget {
-  const DetalhesLugarScreen({super.key, required this.onToggle});
+  const DetalhesLugarScreen({super.key});
 
-  final void Function(Lugar) onToggle;
 
   @override
   Widget build(BuildContext context) {
 
     final lugar = ModalRoute.of(context)?.settings.arguments as Lugar;
-    void _favoritarLugar() {
-      onToggle(lugar);
-    }
+    // void _favoritarLugar() {
+    //   onToggle(lugar);
+    // }
+
+    final lugarModel = Provider.of<LugarModel>(context, listen: true);
 
     return Scaffold(
       appBar: AppBar(
@@ -73,8 +76,12 @@ class DetalhesLugarScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _favoritarLugar,
-        child: Icon(Icons.star_border),
+
+        onPressed: () {
+          lugarModel.toggleLugarFavorito(lugar);
+
+        },
+        child: lugarModel.isFavorito(lugar) ? const Icon(Icons.star_outlined) : const Icon(Icons.star_border_outlined),
       ),
     );
   }

@@ -1,0 +1,10 @@
+^C:\USERS\AMAND\CODE\DIM0524-DDM-20242-FORK\F06_CARRINHO_PROVIDER\BUILD\WINDOWS\X64\CMAKEFILES\3C895D50DA2CD10FFCFD876B8CF353A9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/windows -BC:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/f06_carrinho_provider.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

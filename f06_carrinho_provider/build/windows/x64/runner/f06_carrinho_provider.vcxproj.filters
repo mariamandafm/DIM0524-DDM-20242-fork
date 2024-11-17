@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\windows\runner\flutter_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\windows\runner\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\windows\runner\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\windows\runner\win32_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\windows\flutter\generated_plugin_registrant.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\windows\runner\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\windows\runner\Runner.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{60E0A09A-92D8-3A51-ADE1-9F1086100C15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

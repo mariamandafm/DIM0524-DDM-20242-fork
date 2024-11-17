@@ -5,8 +5,7 @@ import 'package:f05_lugares_app/screens/pais_screen.dart';
 import 'package:flutter/material.dart';
 
 class MinhasAbas extends StatefulWidget {
-  final List<Lugar> listaFavoritos;
-  const MinhasAbas({super.key, required this.listaFavoritos});
+  const MinhasAbas({super.key});
 
   @override
   State<MinhasAbas> createState() => _MinhasAbasState();
@@ -18,7 +17,7 @@ class _MinhasAbasState extends State<MinhasAbas> {
 
   @override
   Widget build(BuildContext context) {
-    return MinhasAbasBottom(lugaresFavoritos: widget.listaFavoritos);
+    return MinhasAbasBottom();
   }
 }
 
@@ -68,8 +67,7 @@ class _MinhasAbasState extends State<MinhasAbas> {
 } */
 
 class MinhasAbasBottom extends StatefulWidget {
-  final List<Lugar> lugaresFavoritos;
-  MinhasAbasBottom({super.key, required this.lugaresFavoritos});
+  MinhasAbasBottom({super.key});
 
   @override
   State<MinhasAbasBottom> createState() => _MinhasAbasBottomState();
@@ -104,7 +102,7 @@ class _MinhasAbasBottomState extends State<MinhasAbasBottom> {
                   child: TabBarView(
                     children: [
                       PaisScreen(),
-                      FavoritosScreen(lugaresFavoritos: widget.lugaresFavoritos,),
+                      FavoritosScreen(),
                     ],
                   ),
                 ),

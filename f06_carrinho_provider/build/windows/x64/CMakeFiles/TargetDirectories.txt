@@ -1,0 +1,10 @@
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/CMakeFiles/INSTALL.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/CMakeFiles/ALL_BUILD.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/CMakeFiles/ZERO_CHECK.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_app.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/flutter/CMakeFiles/flutter_assemble.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/flutter/CMakeFiles/INSTALL.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/CMakeFiles/f06_carrinho_provider.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/CMakeFiles/INSTALL.dir
+C:/Users/amand/code/DIM0524-DDM-20242-fork/f06_carrinho_provider/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir

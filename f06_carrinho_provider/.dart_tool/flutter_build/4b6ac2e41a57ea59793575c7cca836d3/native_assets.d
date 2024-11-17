@@ -1,0 +1,1 @@
+ C:\\Users\\amand\\code\\DIM0524-DDM-20242-fork\\f06_carrinho_provider\\.dart_tool\\flutter_build\\4b6ac2e41a57ea59793575c7cca836d3\\native_assets.yaml: 

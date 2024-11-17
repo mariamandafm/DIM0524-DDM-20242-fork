@@ -1,0 +1,10 @@
+^C:\USERS\AMAND\CODE\DIM0524-DDM-20242-FORK\F06_CARRINHO_PROVIDER\BUILD\WINDOWS\X64\CMAKEFILES\3C895D50DA2CD10FFCFD876B8CF353A9\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

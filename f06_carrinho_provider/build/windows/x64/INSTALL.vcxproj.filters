@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amand\code\DIM0524-DDM-20242-fork\f06_carrinho_provider\build\windows\x64\CMakeFiles\3c895d50da2cd10ffcfd876b8cf353a9\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0C29FC46-2718-3876-8ACC-C885D5F44DF2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
